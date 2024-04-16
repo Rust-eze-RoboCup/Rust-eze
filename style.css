@@ -1,0 +1,220 @@
+:root {
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --vermelho-escuro: #8F2829;
+    --vermelho-claro: #AF262D;
+    --amarelo-escuro: #FFB60D;
+    --amarelo-claro: #FFCF27;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--branco);
+}
+
+h1{
+    font-family: "imbue", serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    font-family: "imbue", serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+p{
+    font-family: "M PLUS Code Latin", monospace;
+    font-size: 20px;
+}
+
+
+
+
+
+/*o background-color n está funcionando com o var*/
+.navbar {
+    background-color: var(--branco);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_logo{
+    font-family: "Imbue", serif;
+    font-size: 50px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.nav_lista {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 50px;
+}
+
+.nav_itens{
+    font-family: "M PLUS Code Latin", monospace;
+    color: var(--preto);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-height: calc(100vh - 70px); /* Altura máxima igual à altura da viewport menos a altura do menu */
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#prevBtn {
+    font-size: 30px;
+    left: 0;
+}
+
+#nextBtn {
+    font-size: 30px;
+    right: 0;
+}
+
+
+
+
+
+.sobre {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.sobre_titulo {
+    margin-bottom: 50px;
+}
+
+.sobre_conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre_p {
+    margin-right: 50px; /* espaço de 50px entre a imagem e o parágrafo */
+    margin-left: 50px;
+    text-align: justify; /* parágrafo justificado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* espaço da imagem e parágrafo de 400px de altura */
+    width: 600px; /* espaço da imagem e parágrafo de 600px de largura */
+}
+
+.sobre_img {
+    margin-right: 50px; /* espaço de 50px entre a imagem e o parágrafo */
+    margin-bottom: 50px;
+}
+
+.sobre_img img {
+    box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.5);
+    height: 400px; /* espaço da imagem e parágrafo de 400px de altura */
+    width: 600px; /* espaço da imagem e parágrafo de 600px de largura */
+}
+
+
+
+
+
+.sobre_status{
+    margin-bottom: 100px;
+}
+
+.status_titulo{
+    margin-bottom: 10px;
+    width: 600px;
+    margin-left: 50px;
+}
+
+.status_conteiner {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 10px;
+    width: 600px;
+    height: 400px;
+    border: 1px dashed;
+    border-width: 2px ; /* Define a espessura da borda apenas nas direções superior e inferior */
+    margin-bottom: 20px;
+    height: 50px; /* Adjusted for the new height */
+}
+  
+.status_bar {
+    height: 20px;
+    background-color: orange;
+}
+
+
+
+
+
+
+.status-bar {
+    margin-bottom: 20px;
+    width: 600px;
+    margin-left: 50px;
+    position: relative;
+    height: 20px;
+    background-color: var(--branco); /* Cor de fundo da barra */
+    margin-bottom: 10px;
+    border: 2px solid var(--amarelo-escuro); /* Borda interna da parte incompleta */
+  }
+  
+  .completed {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--amarelo-escuro); /* Cor da parte completa da barra */
+  }
+  
+  .remaining {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 80%; /* Largura da parte completa */
+    box-sizing: border-box; /* Garante que a borda não aumente a largura total */
+  }
+  
+  
